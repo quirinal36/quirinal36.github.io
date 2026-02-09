@@ -54,6 +54,7 @@ function build(
       banner,
       sourcemap: !isProd && !jekyll
     },
+    context: 'window',
     ...(shouldWatch && { watch: { include: `${SRC_DEFAULT}/**/*.js` } }),
     plugins: [
       babel({
