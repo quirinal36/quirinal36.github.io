@@ -1,0 +1,42 @@
+/* Physics Canvas Component Styles */
+
+:root {
+  // Light mode particle colors
+  --particle-color-1: #0052cc;
+  --particle-color-2: #ff5630;
+  --particle-color-3: #6554c0;
+  --particle-color-4: #ff8b00;
+}
+
+[data-mode='dark'] {
+  // Dark mode particle colors
+  --particle-color-1: #4c9aff;
+  --particle-color-2: #ff6b9d;
+  --particle-color-3: #c69eff;
+  --particle-color-4: #ffab00;
+}
+
+// Canvas fallback (when JavaScript is disabled or errors)
+.no-canvas {
+  #physics-canvas {
+    display: none;
+  }
+
+  .interactive-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--sidebar-bg) 0%, var(--body-bg) 100%);
+  }
+}
+
+// Accessibility: Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  #physics-canvas {
+    display: none;
+  }
+
+  .interactive-container {
+    background: linear-gradient(135deg, var(--sidebar-bg) 0%, var(--body-bg) 100%);
+  }
+}

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<div id="interactive-home" class="interactive-container">
+  <canvas id="physics-canvas" aria-hidden="true" role="presentation"></canvas>
+
+  <div class="overlay-content">
+    <h1 class="site-title-interactive">{{ site.title }}</h1>
+    <p class="site-tagline">{{ site.tagline }}</p>
+    <div class="navigation-buttons">
+      <a href="/archives/" class="btn btn-primary btn-view-posts">
+        <i class="fas fa-book-open me-2"></i>View Blog Posts
+      </a>
+    </div>
+  </div>
+
+  <!-- Pause/Play button -->
+  <button id="physics-toggle" class="physics-control" aria-label="Pause/Play animation">
+    <i class="fas fa-pause"></i>
+  </button>
+</div>
