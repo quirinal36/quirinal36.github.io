@@ -3,7 +3,8 @@
  * Manages Matter.js physics simulation and particle rendering
  */
 
-import * as Matter from 'matter-js';
+// Matter.js is loaded via CDN (see _includes/js-selector.html)
+const Matter = window.Matter;
 import { createParticles, getThemeColors } from './particle-system';
 import { initMouseTracker, getMousePosition, isTouchDevice } from './mouse-tracker';
 

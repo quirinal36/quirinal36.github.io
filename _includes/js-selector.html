@@ -49,6 +49,10 @@
   {% assign urls = urls | append: ',' | append: site.data.origin[type].mermaid.js %}
 {% endif %}
 
+{% if page.layout == 'home-interactive' %}
+  {% assign urls = urls | append: ',' | append: site.data.origin[type].matter.js %}
+{% endif %}
+
 {% include jsdelivr-combine.html urls=urls %}
 
 {% case page.layout %}

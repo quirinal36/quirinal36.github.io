@@ -3,7 +3,8 @@
  * Creates and manages physics particles with different shapes and colors
  */
 
-import * as Matter from 'matter-js';
+// Matter.js is loaded via CDN (see _includes/js-selector.html)
+const Matter = window.Matter;
 
 /**
  * Get theme-aware colors from CSS custom properties
